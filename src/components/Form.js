@@ -1,5 +1,4 @@
-// import css modules
-
+import cssModules from "./Form.module.css";
 const styles = {
   form: {
     margin: "16px 20% 0",
@@ -24,7 +23,6 @@ const styles = {
   },
 };
 
-
 function Form() {
   return (
     <div>
@@ -39,10 +37,19 @@ function Form() {
             style={styles.formInput}
           />
         </div>
-        {/* code here */}
+        <div className={cssModules.formGroup}>
+          <label htmlFor="email" className={cssModules.formLabel}>
+            Email
+          </label>
+          <input
+            id="email"
+            placeholder="Input email"
+            className={cssModules.formInput}
+          />
+        </div>
       </form>
     </div>
-  )
+  );
 }
 
-export default Form
+export default Form;
